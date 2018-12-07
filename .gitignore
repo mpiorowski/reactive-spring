@@ -24,4 +24,5 @@ hs_err_pid*
 
 .idea
 
-database/_mongo
+database/_mongo1
+database/_mongo2
