@@ -5,6 +5,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import reactive.spring.accountservice.model.Account;
+import reactive.spring.accountservice.payload.AccountRequest;
 import reactive.spring.accountservice.repository.AccountRepository;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
@@ -36,7 +37,8 @@ public class AccountController {
   }
 
   @PostMapping
-  public Mono<Account> create(@RequestBody Account account) {
+  public Mono<Account> create(@RequestBody AccountRequest accountRequest) {
+    Account account = accountRequest.toAccount();
     LOGGER.info("create: {}", account);
     return repository.save(account);
   }
