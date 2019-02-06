@@ -1,6 +1,5 @@
-# reactive-spring
-Reactive spring applications
+## Exemplary application with reactive spring
 
-based on:
+Application showing basic usage of reactive spring with postgres database. Based on two tutorials:
 - https://piotrminkowski.wordpress.com/2018/05/04/reactive-microservices-with-spring-webflux-and-spring-cloud/
 - https://dzone.com/articles/introduction-to-reactive-apis-with-postgres-r2dbc
